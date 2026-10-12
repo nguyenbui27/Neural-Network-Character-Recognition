@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pixel Draw · Number Recognition</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main>
+  <header><h1>Draw a number</h1><p>Write a digit from 0 to 9, then see what it is.</p></header>
+  <section class="recognizer" aria-label="Handwriting recognition">
+    <div class="drawing-area">
+      <div class="canvas-wrap"><canvas id="drawing" width="280" height="280" aria-label="Draw a digit here"></canvas><span id="drawHint">Draw here</span></div>
+      <div class="actions"><button id="recognize" disabled>Recognize</button><button id="clear" class="secondary">Clear</button></div>
+    </div>
+    <div class="result" aria-live="polite"><h2>Recognized number</h2><output id="digit">—</output></div>
+  </section>
+  <p id="message" role="status"></p>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>

@@ -6,6 +6,12 @@ Originally a Java/BlueJ digit recognition project; rebuilt with Python and Tenso
 
 A Python/TensorFlow CNN for handwritten **digits 0–9**, with a simple browser drawing canvas and recognized-number result, shared image preprocessing, and held-out model evaluation. This project replaces the original Java elastic stroke matcher. That original source and launcher are in `legacy-java/`.
 
+## Play in your browser
+
+[Playable game — draw and recognize digits](https://nguyenbui27.github.io/Neural-Network-Character-Recognition/). No installation is required. The pixel-themed demo runs the trained CNN locally in a Web Worker using exported float32 weights.
+
+To serve the static demo locally, run `python -m http.server 5052 --directory docs`. To regenerate the browser weights after retraining, run `python export_browser.py`. Verify exported inference with `node tests/browser-inference.mjs` (10 reference inputs compared against TensorFlow). Browser image resizing uses Canvas high-quality sampling; the Python pipeline uses Pillow LANCZOS, so freehand predictions can differ slightly. The 97.36% benchmark belongs to the Python evaluation.
+
 ## Run on macOS
 
 Double-click `Run.command` in Finder, or run `zsh Run.command` from this folder in Terminal. The launcher opens http://127.0.0.1:5050. A trained model is included when available. Draw a large, centered digit and click **Recognize**; multiple strokes are supported. **Clear** starts a new drawing.
