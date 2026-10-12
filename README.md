@@ -1,6 +1,6 @@
 # Neural Network Character Recognition
 
-**CNN upgrade and evaluation: October 12, 2026.** Originally a Java/BlueJ digit recognition project; rebuilt with Python and TensorFlow.
+Originally a Java/BlueJ digit recognition project; rebuilt with Python and TensorFlow.
 
 ![Pixel-themed drawing interface](docs/pixel-ui.png)
 
